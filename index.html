@@ -247,7 +247,7 @@ body {
     place-items: center;
     color: white;
     font-family: 'Great Vibes', cursive;
-    font-size: 25px;
+    font-size: 10px;
     z-index: 5;
     transition: opacity .5s;
 }
@@ -694,7 +694,7 @@ body {
 }
 
 
-/* EVENT PLACE SECTION */
+/* Ceremony  SECTION */
 .event-place-section {
     padding: 60px 8%;
     text-align: center;
@@ -876,6 +876,48 @@ body {
 }
 
 
+.principal-sponsors {
+    text-align: center;
+    background: #fff0f5;
+    padding: 50px 20px;
+}
+
+.sponsors-list {
+    max-width: 650px;
+    margin: 25px auto 0;
+}
+
+.sponsor-pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 12px;
+    border-bottom: 1px solid #e8b8c9;
+}
+
+.sponsor-pair p {
+    flex: 1;
+    margin: 0;
+    color: #8f3d5b;
+    font-size: 17px;
+}
+
+.sponsor-pair span {
+    color: #d66b91;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .sponsor-pair {
+        gap: 8px;
+    }
+
+    .sponsor-pair p {
+        font-size: 14px;
+    }
+}
+
 
 /* COUNTDOWN - PINK THEME */
 
@@ -1054,6 +1096,155 @@ footer h2 {
         font-size: 26px;
     }
 
+}
+
+/* ===== ENTOURAGE PINK WEDDING THEME ===== */
+
+.entourage-couples {
+    padding: 75px 8%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    /* Soft pink background */
+    background:
+        radial-gradient(circle at 10% 15%, rgba(255,255,255,0.8) 0 3%, transparent 3.5%),
+        radial-gradient(circle at 90% 30%, rgba(255,255,255,0.6) 0 5%, transparent 5.5%),
+        radial-gradient(circle at 15% 85%, rgba(232,160,191,0.2) 0 8%, transparent 8.5%),
+        linear-gradient(135deg, #fff0f5, #fbd6e3, #fff5f7);
+}
+
+/* Decorative background circles */
+.entourage-couples::before {
+    content: "✿";
+    position: absolute;
+    top: 25px;
+    left: 5%;
+    font-size: 75px;
+    color: rgba(194,24,91,0.10);
+    pointer-events: none;
+}
+
+.entourage-couples::after {
+    content: "❀";
+    position: absolute;
+    bottom: 20px;
+    right: 5%;
+    font-size: 90px;
+    color: rgba(194,24,91,0.10);
+    pointer-events: none;
+}
+
+/* MAIN TITLE */
+.entourage-couples .script {
+    color: #c06b88;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.entourage-couples h2 {
+    color: #a83d65;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.entourage-subtitle {
+    color: #805568;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+/* PARTNER CARDS */
+.entourage-pair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 25px;
+
+    background: rgba(255,255,255,0.85);
+    border: 1px solid #f3c4d4;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 20px rgba(168,61,101,0.12);
+
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.entourage-pair:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(168,61,101,0.20);
+}
+
+/* NAMES */
+.entourage-person {
+    flex: 1;
+    padding: 12px;
+}
+
+.entourage-person h3 {
+    color: #c05a7d;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.entourage-person p {
+    color: #684354;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* HEART */
+.heart-divider {
+    color: #e66b94;
+    font-size: 30px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    .entourage-couples {
+        padding: 50px 5%;
+    }
+
+    .entourage-couples h2 {
+        font-size: 28px;
+    }
+
+    .entourage-pair {
+        gap: 8px;
+        padding: 15px 8px;
+    }
+
+    .entourage-person {
+        padding: 5px;
+    }
+
+    .entourage-person h3 {
+        font-size: 14px;
+    }
+
+    .entourage-person p {
+        font-size: 13px;
+    }
+
+    .heart-divider {
+        font-size: 22px;
+    }
 }
 
 
@@ -1512,10 +1703,10 @@ footer h2 {
     <p class="script">Two Hearts, One Love</p>
 
 </section>
-<!-- EVENT PLACE SECTION -->
+<!-- Ceremony  SECTION -->
 
 <section class="event-place-section" id="event-place">
-    <h2>Our Event Place</h2>
+    <h2>Ceremony will be held at</h2>
     <p>Discover the beautiful St. Gabriel the Archangel Parish Church.</p>
 
     <div class="event-place-container">
@@ -1587,14 +1778,46 @@ footer h2 {
 
 <!-- PRINCIPAL SPONSORS -->
 
-<section class="entourage-single">
+
+<section class="entourage-single principal-sponsors">
     <p class="script">Our Dear Sponsors</p>
     <h2>Principal Sponsors</h2>
-    <p>[Ninong Name]</p>
-    <p>[Ninang Name]</p>
-    <p>[Ninong Name]</p>
-    <p>[Ninang Name]</p>
+
+    <div class="sponsors-list">
+        <div class="sponsor-pair">
+            <p>Carmela Menzoda</p>
+            <span>&</span>
+            <p>Roberto Pajardo</p>
+        </div>
+<div class="sponsor-pair">
+            <p>Angelica Santos</p>
+            <span>&</span>
+            <p>Randy Catindig</p>
+        </div>
+        <div class="sponsor-pair">
+            <p>Melinda Pineda</p>
+            <span>&</span>
+            <p>Victor Nati</p>
+        </div>
+
+        <div class="sponsor-pair">
+            <p>Yolly Faria</p>
+            <span>&</span>
+            <p>Jheck Jheck Alcantara</p>
+        </div>
+        <div class="sponsor-pair">
+            <p>Yolanda Santos</p>
+            <span>&</span>
+            <p>Wilfredo Martinez</p>
+        </div>
+        <div class="sponsor-pair">
+            <p>Elenita Baquial</p>
+            <span>&</span>
+            <p>Edgar Rivera</p>
+        </div>
+    </div>
 </section>
+
 
 
 <!-- BEST MAN -->
@@ -1615,25 +1838,117 @@ footer h2 {
 </section>
 
 
-<!-- GROOMSMEN -->
 
-<section class="entourage-single alternate">
-    <p class="script">His Closest Friends</p>
-    <h2>Groomsmen</h2>
-    <p>[Name]</p>
-    <p>[Name]</p>
-    <p>[Name]</p>
-</section>
+<section class="entourage-couples">
 
+    <p class="script">Our Special People</p>
+    <h2>Wedding Entourage</h2>
+    <p class="entourage-subtitle">The people who make our day complete</p>
 
-<!-- BRIDESMAIDS -->
+    <!-- PARTNER 1 -->
+    <div class="entourage-pair">
+        <div class="entourage-person">
+            <h3>Groomsman</h3>
+            <p>Mark Rayven Zuniega</p>
+        </div>
+        <div class="heart-divider">♥</div>
+        <div class="entourage-person">
+            <h3>Bridesmaid</h3>
+            <p>Elaiza Zamora</p>
+        </div>
+    </div>
 
-<section class="entourage-single">
-    <p class="script">Her Closest Friends</p>
-    <h2>Bridesmaids</h2>
-    <p>[Name]</p>
-    <p>[Name]</p>
-    <p>[Name]</p>
+    <!-- PARTNER 2 -->
+    <div class="entourage-pair">
+        <div class="entourage-person">
+            <h3>Groomsman</h3>
+            <p>Martee Diño</p>
+        </div>
+        <div class="heart-divider">♥</div>
+        <div class="entourage-person">
+            <h3>Bridesmaid</h3>
+            <p>Pauline Gaile Alcantara</p>
+        </div>
+    </div>
+
+    <!-- PARTNER 3 -->
+    <div class="entourage-pair">
+        <div class="entourage-person">
+            <h3>Groomsman</h3>
+            <p>Quin John Zuniega</p>
+        </div>
+        <div class="heart-divider">♥</div>
+        <div class="entourage-person">
+            <h3>Bridesmaid</h3>
+            <p>Rocelene Llanes</p>
+        </div>
+    </div>
+
+    <!-- PARTNER 4 -->
+    <div class="entourage-pair">
+        <div class="entourage-person">
+            <h3>Groomsman</h3>
+            <p>Jayford Bongo</p>
+        </div>
+        <div class="heart-divider">♥</div>
+        <div class="entourage-person">
+            <h3>Bridesmaid</h3>
+            <p>Kristal kate Tabares</p>
+        </div>
+    </div>
+
+    <!-- PARTNER 5 -->
+    <div class="entourage-pair">
+        <div class="entourage-person">
+            <h3>Groomsman</h3>
+            <p>Florence Llanes</p>
+        </div>
+        <div class="heart-divider">♥</div>
+        <div class="entourage-person">
+            <h3>Bridesmaid</h3>
+            <p>Princess larah Blanca</p>
+        </div>
+    </div>
+
+    <!-- PARTNER 6 -->
+    <div class="entourage-pair">
+        <div class="entourage-person">
+            <h3>Groomsman</h3>
+            <p>Noel Gica</p>
+        </div>
+        <div class="heart-divider">♥</div>
+        <div class="entourage-person">
+            <h3>Bridesmaid</h3>
+            <p>Andrea Llanes</p>
+        </div>
+    </div>
+
+    <!-- PARTNER 7 -->
+    <div class="entourage-pair">
+        <div class="entourage-person">
+            <h3>Groomsman</h3>
+            <p>Elmo Mariño</p>
+        </div>
+        <div class="heart-divider">♥</div>
+        <div class="entourage-person">
+            <h3>Bridesmaid</h3>
+            <p>Florence Marie Bongo</p>
+        </div>
+    </div>
+
+    <!-- PARTNER 8 -->
+    <div class="entourage-pair">
+        <div class="entourage-person">
+            <h3>Groomsman</h3>
+            <p>Tristan Jay De Leon</p>
+        </div>
+        <div class="heart-divider">♥</div>
+        <div class="entourage-person">
+            <h3>Bridesmaid</h3>
+            <p>Johan Ellisse Castillo</p>
+        </div>
+    </div>
+
 </section>
 
 
@@ -1642,8 +1957,8 @@ footer h2 {
 <section class="entourage-single alternate">
     <p class="script">Lighting Our Path</p>
     <h2>Candle Sponsors</h2>
-    <p>[Name]</p>
-    <p>[Name]</p>
+    <p>Elaiza Bea Diango</p>
+    <p>Mark Laurence Alcantara</p>
 </section>
 
 
@@ -1652,8 +1967,8 @@ footer h2 {
 <section class="entourage-single">
     <p class="script">United As One</p>
     <h2>Veil Sponsors</h2>
-    <p>[Name]</p>
-    <p>[Name]</p>
+    <p>Ma. Theresa Catolico</p>
+    <p>Frederick Marcilla</p>
 </section>
 
 
@@ -1662,17 +1977,41 @@ footer h2 {
 <section class="entourage-single alternate">
     <p class="script">Bound By Love</p>
     <h2>Cord Sponsors</h2>
-    <p>[Name]</p>
-    <p>[Name]</p>
+    <p>Mary Joy Pangan</p>
+    <p>John Wayne Son</p>
 </section>
 
+
+<!-- BIBLE BEARER -->
+<section class="entourage-single bible-bearer">
+
+    <p class="script">A Special Blessing</p>
+    <h2>Bible Bearer</h2>
+
+    <div class="bible-bearer-card">
+        <p>Mark Lester Alcantara</p>
+    </div>
+
+</section>
+
+<!-- COINS BEARER -->
+<section class="entourage-single coins-bearer">
+
+    <p class="script">A Symbol of Love and Prosperity</p>
+    <h2>Coins Bearer</h2>
+
+    <div class="coins-bearer-card">
+        <p>Pablo Quiambao</p>
+    </div>
+
+</section>
 
 <!-- RING BEARER -->
 
 <section class="entourage-single">
     <p class="script">A Little Blessing</p>
     <h2>Ring Bearer</h2>
-    <p>[Name]</p>
+    <p>Lei Jaymark Monteverde</p>
 </section>
 
 
@@ -1680,8 +2019,9 @@ footer h2 {
 
 <section class="entourage-single alternate">
     <p class="script">A Touch Of Sweetness</p>
-    <h2>Flower Girl</h2>
-    <p>[Name]</p>
+    <h2>Flower Girls</h2>
+    <p>Sofie Blanca</p>
+    <p>Ana Eliz Dela Cruz</p>
 </section>
 
 
@@ -1690,7 +2030,7 @@ footer h2 {
 <section class="entourage-single">
     <p class="script">Our Little Princess</p>
     <h2>Little Bride</h2>
-    <p>[Name]</p>
+    <p>Jelayne Gail Biatriz Pangan</p>
 </section>
 
 
@@ -1699,7 +2039,7 @@ footer h2 {
 <section class="entourage-single alternate">
     <p class="script">Our Little Gentleman</p>
     <h2>Little Groom</h2>
-    <p>[Name]</p>
+    <p>Khai Sarmiento</p>
 </section>
 
 
