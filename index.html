@@ -1021,6 +1021,340 @@ footer h2 {
 }
 
 
+/* VINTAGE PINK SPONSORS DESIGN */
+
+.vintage-sponsors {
+    background: #fff5f5;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.vintage-border {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px 30px;
+    background: #fffafa;
+
+    border: 3px double #c88998;
+    outline: 1px solid #e6bbc4;
+    outline-offset: 7px;
+
+    position: relative;
+    box-shadow: 0 5px 20px rgba(160, 95, 115, 0.12);
+}
+
+/* Decorative corners */
+
+.vintage-border::before {
+    content: "❀";
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    color: #c88998;
+    font-size: 25px;
+}
+
+.vintage-border::after {
+    content: "❀";
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    color: #c88998;
+    font-size: 25px;
+}
+
+.vintage-title {
+    font-family: "Brush Script MT", cursive;
+    font-size: 42px;
+    color: #b87888;
+    margin: 0 0 12px;
+}
+
+.vintage-subtitle {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #bd8794;
+    margin: 10px 0 25px;
+}
+
+.vintage-border h2 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 25px;
+    color: #a96879;
+    margin: 15px 0;
+}
+
+.vintage-divider {
+    color: #c68b99;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.vintage-names {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 570px;
+    margin: 25px auto;
+}
+
+.name-column p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #956474;
+    margin: 13px 0;
+    text-align: left;
+}
+
+.vintage-footer {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #bd8794;
+    font-size: 14px;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 480px) {
+
+    .vintage-border {
+        padding: 30px 15px;
+    }
+
+    .vintage-title {
+        font-size: 34px;
+    }
+
+    .vintage-border h2 {
+        font-size: 19px;
+    }
+
+    .vintage-names {
+        gap: 12px;
+    }
+
+    .name-column p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+/* VINTAGE PINK EVENT PLACE */
+
+.event-place-vintage {
+    background: #fff5f5;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.event-vintage-border {
+    max-width: 950px;
+    margin: auto;
+    padding: 35px;
+    background: #fffafa;
+    border: 3px double #c88998;
+    outline: 1px solid #e6bbc4;
+    outline-offset: 7px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(160, 95, 115, .12);
+}
+
+.event-script {
+    font-family: "Brush Script MT", cursive;
+    font-size: 42px;
+    color: #b87888;
+    margin: 0 0 10px;
+}
+
+.event-subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #bd8794;
+}
+
+.event-vintage-border h2 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a96879;
+    font-size: 27px;
+}
+
+.event-divider {
+    color: #c68b99;
+    margin: 20px 0;
+}
+
+.event-place-content {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.event-photo,
+.event-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.event-photo img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border: 5px solid #f3dce1;
+    outline: 1px solid #c88998;
+    outline-offset: 4px;
+}
+
+.event-details h3 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #a96879;
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+.event-location {
+    color: #b87888;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.event-description {
+    color: #956474;
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.event-map {
+    margin: 20px 0;
+    border: 3px double #c88998;
+    padding: 5px;
+}
+
+.event-map iframe {
+    display: block;
+    width: 100%;
+}
+
+.event-map-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #b87888;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.event-map-button:hover {
+    background: #95596b;
+}
+
+.event-footer {
+    color: #bd8794;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .event-place-vintage {
+        padding: 45px 20px;
+    }
+
+    .event-vintage-border {
+        padding: 25px 20px;
+    }
+
+    .event-place-content {
+        gap: 20px;
+    }
+
+    .event-photo img {
+        height: 300px;
+    }
+
+    .event-details h3 {
+        font-size: 19px;
+    }
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .event-place-vintage {
+        padding: 35px 15px;
+    }
+
+    .event-vintage-border {
+        padding: 25px 13px;
+        border-width: 2px;
+    }
+
+    .event-script {
+        font-size: 34px;
+    }
+
+    .event-subtitle {
+        font-size: 10px;
+    }
+
+    .event-vintage-border h2 {
+        font-size: 21px;
+    }
+
+    .event-place-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .event-photo,
+    .event-details {
+        width: 100%;
+    }
+
+    .event-photo img {
+        height: 260px;
+        box-sizing: border-box;
+    }
+
+    .event-details h3 {
+        font-size: 20px;
+    }
+
+    .event-description {
+        font-size: 14px;
+    }
+
+    .event-map iframe {
+        height: 220px;
+    }
+
+    .event-map-button {
+        font-size: 12px;
+        padding: 11px 15px;
+    }
+
+}
+
 
 
 /* ENTOURAGE TITLE */
@@ -1707,7 +2041,7 @@ footer h2 {
 
 <section class="event-place-section" id="event-place">
     <h2>Ceremony will be held at</h2>
-    <p>Discover the beautiful St. Gabriel the Archangel Parish Church.</p>
+    <p>St. Gabriel the Archangel Parish Church.</p>
 
     <div class="event-place-container">
 
@@ -1745,6 +2079,83 @@ footer h2 {
     </div>
 </section>
 
+<!-- OUR EVENT PLACE -->
+
+<section class="event-place-vintage" id="event-place">
+
+    <div class="event-vintage-border">
+
+        <p class="event-script">Where We Say I Do</p>
+
+        <p class="event-subtitle">OUR SPECIAL DAY</p>
+
+        <h2>Our Event Place</h2>
+
+        <div class="event-divider">
+            ❀ ───────── ✧ ───────── ❀
+        </div>
+
+        <div class="event-place-content">
+
+            <!-- CHURCH PHOTO -->
+            <div class="event-photo">
+                <img
+                    src="event.jpg"
+                    alt="St. Gabriel the Archangel Parish Church"
+                >
+            </div>
+
+            <!-- CHURCH DETAILS -->
+            <div class="event-details">
+
+                <h3>St. Gabriel the Archangel Parish Church</h3>
+
+                <p class="event-location">
+                    Santa Maria, Bulacan
+                </p>
+
+                <p class="event-description">
+                    Join us as we celebrate our love
+                    and begin our journey together
+                    in the presence of God.
+                </p>
+
+                
+<div class="event-map">
+    <iframe
+        src="https://maps.google.com/maps?q=14.8020269,120.9623446&z=17&output=embed"
+        width="100%"
+        height="220"
+        style="border:0;"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=St.+Gabriel+the+Archangel+Parish+Church+Santa+Maria+Bulacan"
+                    target="_blank"
+                    class="event-map-button">
+                    View Location on Google Maps
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="event-divider">
+            ❀ ───────── ✧ ───────── ❀
+        </div>
+
+        <p class="event-footer">
+            Together with love, we begin forever.
+        </p>
+
+    </div>
+
+</section>
+
 
 
 <!-- THE ENTOURAGE TITLE -->
@@ -1776,47 +2187,74 @@ footer h2 {
 </section>
 
 
-<!-- PRINCIPAL SPONSORS -->
 
+<!-- PRINCIPAL SPONSORS VINTAGE DESIGN -->
 
-<section class="entourage-single principal-sponsors">
-    <p class="script">Our Dear Sponsors</p>
-    <h2>Principal Sponsors</h2>
+<section class="vintage-sponsors">
 
-    <div class="sponsors-list">
-        <div class="sponsor-pair">
-            <p>Carmela Menzoda</p>
-            <span>&</span>
-            <p>Roberto Pajardo</p>
-        </div>
-<div class="sponsor-pair">
-            <p>Angelica Santos</p>
-            <span>&</span>
-            <p>Randy Catindig</p>
-        </div>
-        <div class="sponsor-pair">
-            <p>Melinda Pineda</p>
-            <span>&</span>
-            <p>Victor Nati</p>
+    <div class="vintage-border">
+
+        <p class="vintage-title">Our Wedding</p>
+
+        <p class="vintage-subtitle">
+            BRIDAL ENTOURAGE
+        </p>
+
+        <h2>Principal Sponsors</h2>
+
+        <div class="vintage-divider">
+            ❀ ───────── ✧ ───────── ❀
         </div>
 
-        <div class="sponsor-pair">
-            <p>Yolly Faria</p>
-            <span>&</span>
-            <p>Jheck Jheck Alcantara</p>
+        <div class="vintage-names">
+
+            <div class="name-column">
+                <p>Carmela Menzoda</p>
+                <p>Angelica Santos</p>
+                <p>Melinda Pineda</p>
+                <p>Yolly Faria</p>
+                <p>Yolanda Santos</p>
+                <p>Elenita Baquial</p>
+                <p>Emily Dela Cruz</p>
+                <p>Arlyn Pullapoy</p>
+                <p>Evangeline Suarez</p>
+                <p>Arlyn Sunsay</p>
+                <p>Nenita Temblor</p>
+                <p>Maricel Llanes</p>
+                <p>Merlyn Deloso</p>
+            </div>
+
+            <div class="name-column">
+                <p>Roberto Pajardo</p>
+                <p>Randy Catindig</p>
+                <p>Victor Nati</p>
+                <p>Jheck Jheck Alcantara</p>
+                <p>Wilfredo Martinez</p>
+                <p>Edgar Rivera</p>
+                <p>Jun Tupino</p>
+                <p>Ruel Sarmiento</p>
+                <p>Lauro Sarmiento</p>
+                <p>Vic Cudayona</p>
+                <p>Elmo Mariño</p>
+                <p>Benjamin Bongo</p>
+                <p>Joel Dela Cruz</p>
+
+            </div>
+
         </div>
-        <div class="sponsor-pair">
-            <p>Yolanda Santos</p>
-            <span>&</span>
-            <p>Wilfredo Martinez</p>
+
+        <div class="vintage-divider">
+            ❀ ───────── ✧ ───────── ❀
         </div>
-        <div class="sponsor-pair">
-            <p>Elenita Baquial</p>
-            <span>&</span>
-            <p>Edgar Rivera</p>
-        </div>
+
+        <p class="vintage-footer">
+            With love and gratitude
+        </p>
+
     </div>
+
 </section>
+
 
 
 
