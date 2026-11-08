@@ -42,7 +42,7 @@ body {
             rgba(92, 36, 57, .35),
             rgba(92, 36, 57, .35)
         ),
-        url("FRONT.jpg") center center / cover no-repeat;
+        url("FRONT (2).jpg") center center / cover no-repeat;
 }
 .envelope-area {
     position: relative;
@@ -1914,7 +1914,9 @@ footer h2 {
 <body>
 
 <!-- COVER -->
-
+<audio id="weddingMusic" loop>
+    <source src="music/wedding-song.mp3.mp3" type="audio/mpeg">
+</audio>
 
 <section class="cover" id="cover">
 
@@ -2029,7 +2031,7 @@ footer h2 {
 </div>
 
 <div class="photo-frame">
-    <img src="couple3.jpg" alt="Couple Photo 3">
+    <img src="WEDDING 3.jpg" alt="Couple Photo 3">
 </div>
 
     </div>
@@ -2881,6 +2883,12 @@ function openCard() {
 
     const envelope = document.getElementById("envelope");
     const invitation = document.getElementById("invitation");
+    const music = document.getElementById("weddingMusic");
+
+    // Play wedding music
+    music.play().catch(error => {
+        console.log("Music playback was blocked:", error);
+    });
 
     envelope.classList.add("open");
 
