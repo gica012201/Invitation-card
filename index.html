@@ -1991,6 +1991,171 @@ footer h2 {
     }
 }
 
+.color-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    color: #8B5263;
+    font-weight: bold;
+}
+
+.color-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #c9aeb5;
+}
+
+.cream-color {
+    background: #F1E1C8;
+}
+
+.beige-color {
+    background: #D8C2A5;
+}
+
+/* FIX PRINCIPAL SPONSORS OUTFIT */
+
+.dresscode-section .people-pair {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 280px)) !important;
+    justify-content: center !important;
+    align-items: start !important;
+    gap: 35px !important;
+    width: 100%;
+    margin: 35px auto;
+}
+
+.dresscode-section .person-outfit {
+    position: static !important;
+    width: 100% !important;
+    max-width: 280px;
+    margin: 0 auto !important;
+    text-align: center;
+}
+
+.dresscode-section .outfit-image {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border: 3px solid #d99aaa;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.dresscode-section .outfit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.dresscode-section .color-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #8b5263;
+}
+
+@media (max-width: 600px) {
+    .dresscode-section .people-pair {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ENTOURAGE DRESS CODE */
+
+.entourage-dress .people-pair {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 280px));
+    justify-content: center;
+    align-items: start;
+    gap: 35px;
+    width: 100%;
+    margin: 35px auto;
+}
+
+.entourage-dress .person-outfit {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.entourage-dress .outfit-image {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border: 3px solid #D69A9B;
+    border-radius: 15px;
+    background: #FFF0F4;
+}
+
+.entourage-dress .outfit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.entourage-dress .color-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    color: #8B5263;
+    font-weight: bold;
+}
+
+.entourage-dress .color-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #D69A9B;
+}
+
+.entourage-dress .pink-color {
+    background: #FFC0CB;
+}
+
+.entourage-dress .oldrose-color {
+    background: #C08081;
+}
+
+.entourage-dress .dress-note {
+    color: #A65D72;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+.entourage-dress .color-stickers {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.entourage-dress .color-stickers span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #D69A9B;
+}
+
+@media (max-width: 600px) {
+    .entourage-dress .people-pair {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
 
@@ -2556,7 +2721,7 @@ footer h2 {
 <section class="entourage-single">
     <p class="script">Our Little Princess</p>
     <h2>Little Bride</h2>
-    <p>Jelayne Gail Biatriz Pangan</p>
+    <p>Jelayne Earl Biatriz Pangan</p>
 </section>
 
 
@@ -2575,6 +2740,7 @@ footer h2 {
 
 <!-- PRINCIPAL SPONSORS -->
 
+
 <section class="dresscode-section">
 
     <p class="script">Elegance in Every Detail</p>
@@ -2583,62 +2749,36 @@ footer h2 {
 
     <div class="people-pair">
 
-        <!-- GENTLEMAN -->
         <div class="person-outfit">
-            <div class="model gentleman cream">
-                <div class="hair"></div>
-                <div class="head"></div>
-                <div class="neck"></div>
-                <div class="body">
-                    <div class="shirt"></div>
-                    <div class="jacket-left"></div>
-                    <div class="jacket-right"></div>
-                    <div class="pants"></div>
-                </div>
-                <div class="leg left"></div>
-                <div class="leg right"></div>
-                <div class="shoe left-shoe"></div>
-                <div class="shoe right-shoe"></div>
+            <div class="outfit-image">
+                <img src="NINONG.jpg" alt="Cream Barong Tagalog">
             </div>
             <p>Gentlemen</p>
             <small>Barong Tagalog</small>
+            <div class="color-label">
+                <span class="color-circle cream-color"></span>
+                Cream / Ivory
+            </div>
         </div>
 
-        <!-- LADY -->
         <div class="person-outfit">
-            <div class="model lady beige">
-                <div class="lady-hair"></div>
-                <div class="lady-head"></div>
-                <div class="lady-neck"></div>
-                <div class="gown">
-                    <div class="gown-top"></div>
-                    <div class="gown-skirt"></div>
-                </div>
-                <div class="arm left-arm"></div>
-                <div class="arm right-arm"></div>
-                <div class="lady-leg"></div>
-                <div class="lady-shoes"></div>
+            <div class="outfit-image">
+                <img src="NINANG.jpg" alt="Beige Formal Gown">
             </div>
             <p>Ladies</p>
             <small>Elegant Formal Gown</small>
+            <div class="color-label">
+                <span class="color-circle beige-color"></span>
+                Beige
+            </div>
         </div>
 
     </div>
-
-    <p class="dress-note">Cream or Beige</p>
-
-    <div class="color-stickers">
-        <span style="background:#fff1d6"></span>
-        <span style="background:#ead8b9"></span>
-        <span style="background:#d8c3a0"></span>
-        <span style="background:#f5e6cb"></span>
-    </div>
-
 </section>
 
 
-<!-- ENTOURAGE -->
 
+<!-- ENTOURAGE -->
 
 <section class="dresscode-section entourage-dress">
 
@@ -2648,44 +2788,40 @@ footer h2 {
 
     <div class="people-pair">
 
-        <!-- GROOMSMEN - PINK -->
+        <!-- GROOMSMEN -->
         <div class="person-outfit">
-            <div class="model gentleman pink">
-                <div class="hair"></div>
-                <div class="head"></div>
-                <div class="neck"></div>
-                <div class="body">
-                    <div class="shirt"></div>
-                    <div class="jacket-left"></div>
-                    <div class="jacket-right"></div>
-                    <div class="pants"></div>
-                </div>
-                <div class="leg left"></div>
-                <div class="leg right"></div>
-                <div class="shoe left-shoe"></div>
-                <div class="shoe right-shoe"></div>
+
+            <div class="outfit-image">
+                <img src="GROOMMEN.png"
+                     alt="Pink Formal Suit">
             </div>
+
             <p>Groomsmen</p>
             <small>Pink Formal Suit</small>
+
+            <div class="color-label">
+                <span class="color-circle pink-color"></span>
+                Pink
+            </div>
+
         </div>
 
-        <!-- BRIDESMAIDS - OLD ROSE -->
+        <!-- BRIDESMAIDS -->
         <div class="person-outfit">
-            <div class="model lady old-rose-gown">
-                <div class="lady-hair"></div>
-                <div class="lady-head"></div>
-                <div class="lady-neck"></div>
-                <div class="gown">
-                    <div class="gown-top"></div>
-                    <div class="gown-skirt"></div>
-                </div>
-                <div class="arm left-arm"></div>
-                <div class="arm right-arm"></div>
-                <div class="lady-leg"></div>
-                <div class="lady-shoes"></div>
+
+            <div class="outfit-image">
+                <img src="BRIDEMAID.png"
+                     alt="Old Rose Elegant Gown">
             </div>
+
             <p>Bridesmaids</p>
             <small>Old Rose Elegant Gown</small>
+
+            <div class="color-label">
+                <span class="color-circle oldrose-color"></span>
+                Old Rose
+            </div>
+
         </div>
 
     </div>
@@ -2700,6 +2836,7 @@ footer h2 {
     </div>
 
 </section>
+
 
 
 <!-- GUESTS -->
