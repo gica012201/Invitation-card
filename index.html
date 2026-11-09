@@ -2157,6 +2157,56 @@ footer h2 {
 }
 
 
+/* RSVP REMINDER DESIGN */
+.reminder-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.reminder-box {
+    background: #fff0f5;
+    border: 3px solid #e8a0bf;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+}
+
+.reminder-box h2 {
+    color: #c45c83;
+}
+
+.reminder-box h3 {
+    background: #c45c83;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.reminder-box p {
+    color: #76515f;
+    line-height: 1.6;
+}
+
+.reminder-box button {
+    background: #c45c83;
+    color: white;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
 
 
 </style>
@@ -2361,7 +2411,7 @@ footer h2 {
             <!-- CHURCH DETAILS -->
             <div class="event-details">
 
-                <h3>St. Gabriel the Archangel Parish Church</h3>
+                <h3>Jubillee Hall, at the back of St. Gabriel the Archangel Parish Church </h3>
 
                 <p class="event-location">
                     Santa Maria, Bulacan
@@ -3143,6 +3193,54 @@ footer h2 {
 
 <script>
 
+let reminder50Shown = false;
+let reminder80Shown = false;
+let reminderIsOpen = false;
+
+function checkReminderScroll() {
+
+    const scrollPosition = window.scrollY;
+    const pageHeight = document.documentElement.scrollHeight;
+    const screenHeight = window.innerHeight;
+
+    const scrollPercentage =
+        (scrollPosition / (pageHeight - screenHeight)) * 100;
+
+    if (reminderIsOpen) return;
+
+    // 50% REMINDER
+    if (scrollPercentage >= 50 && !reminder50Shown) {
+
+        document.getElementById("reminder50").style.display = "flex";
+
+        reminder50Shown = true;
+        reminderIsOpen = true;
+    }
+
+    // 80% REMINDER
+    else if (scrollPercentage >= 80 && !reminder80Shown) {
+
+        document.getElementById("reminder80").style.display = "flex";
+
+        reminder80Shown = true;
+        reminderIsOpen = true;
+    }
+}
+
+window.addEventListener("scroll", checkReminderScroll);
+
+function closeReminder(id) {
+
+    document.getElementById(id).style.display = "none";
+
+    reminderIsOpen = false;
+
+    checkReminderScroll();
+}
+
+
+
+
 // OPEN ENVELOPE AND INVITATION
 
 function openCard() {
@@ -3273,6 +3371,49 @@ rsvpForm.addEventListener("submit", function(e) {
 });
 
 </script>
+
+
+<!-- FIRST REMINDER: 50% -->
+<div id="reminder50" class="reminder-overlay">
+    <div class="reminder-box">
+        <h2>A Little Reminder! ♡</h2>
+
+        <p>We hope you're enjoying our wedding invitation!</p>
+
+        <h3>Don't Forget to Fill Out the RSVP!</h3>
+
+        <p>
+            Please confirm your attendance
+            and let us know if you'll be joining our celebration.
+        </p>
+
+        <button onclick="closeReminder('reminder50')">
+            Got it! ♡
+        </button>
+    </div>
+</div>
+
+<!-- SECOND REMINDER: 80% -->
+<div id="reminder80" class="reminder-overlay">
+    <div class="reminder-box">
+        <h2>We're Almost There! ♡</h2>
+
+        <p>Thank you for taking the time to explore our wedding invitation!</p>
+
+        <h3>We Can't Wait to Celebrate With You!</h3>
+
+        <p>
+            We are looking forward to sharing our special day with you.
+            See you at our wedding!
+        </p>
+
+        <button onclick="closeReminder('reminder80')">
+            See You! ♡
+        </button>
+    </div>
+</div>
+
+
 
 </body>
 </html>
