@@ -1905,6 +1905,92 @@ footer h2 {
     }
 }
 
+.rsvp-section {
+    padding: 60px 8%;
+    background: #fff5f5;
+    text-align: center;
+}
+
+.rsvp-border {
+    max-width: 650px;
+    margin: auto;
+    padding: 40px 30px;
+    background: #fffafa;
+    border: 3px double #c88998;
+    outline: 1px solid #e6bbc4;
+    outline-offset: 7px;
+}
+
+.rsvp-script {
+    color: #b87888;
+    font-style: italic;
+    font-size: 22px;
+}
+
+.rsvp-border h2 {
+    color: #a96879;
+    font-family: Georgia, serif;
+    font-size: 32px;
+}
+
+.rsvp-subtitle {
+    color: #956474;
+    margin-bottom: 30px;
+}
+
+#rsvpForm {
+    text-align: left;
+}
+
+#rsvpForm label {
+    display: block;
+    color: #956474;
+    margin: 18px 0 8px;
+    font-weight: bold;
+}
+
+#rsvpForm input,
+#rsvpForm select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d9aab5;
+    border-radius: 7px;
+    background: white;
+    color: #79515d;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+#companionFields {
+    margin-top: 10px;
+}
+
+.companion-field {
+    margin-bottom: 15px;
+}
+
+.rsvp-submit {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: #c88998;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rsvp-submit:hover {
+    background: #a96879;
+}
+
+@media (max-width: 600px) {
+    .rsvp-border {
+        padding: 25px 18px;
+    }
+}
+
 
 
 
@@ -2023,15 +2109,15 @@ footer h2 {
     <div class="photo-grid">
 
         <div class="photo-frame">
-    <img src="WEDDING%201.jpeg" alt="Couple Photo 1">
+    <img src="PHOTO1.jpg" alt="Couple Photo 1">
 </div>
 
 <div class="photo-frame">
-    <img src="WEDDING%202.jpeg" alt="Couple Photo 2">
+    <img src="PHOTO2.jpg" alt="Couple Photo 2">
 </div>
 
 <div class="photo-frame">
-    <img src="WEDDING 3.jpg" alt="Couple Photo 3">
+    <img src="PHOTO3.jpg" alt="Couple Photo 3">
 </div>
 
     </div>
@@ -2860,6 +2946,49 @@ footer h2 {
         </div>
 
     </div>
+<section class="rsvp-section" id="rsvp">
+    <div class="rsvp-border">
+
+        <p class="rsvp-script">We Hope to See You</p>
+        <h2>Wedding RSVP</h2>
+        <p class="rsvp-subtitle">
+            Kindly confirm your attendance
+        </p>
+
+        <form id="rsvpForm">
+
+            <label>Your Full Name</label>
+            <input type="text" name="guestName"
+                placeholder="Enter your complete name" required>
+
+            <label>Your Role</label>
+            <select name="role" required>
+                <option value="">Select your role</option>
+                <option>Guest</option>
+                <option>Groomsmen</option>
+                <option>Bridesmaid</option>
+                <option>Principal Sponsor</option>
+            </select>
+
+            <label>Number of Companions</label>
+            <select id="companionCount" name="companionCount">
+                <option value="0">0 - No Companion</option>
+                <option value="1">1 Companion</option>
+                <option value="2">2 Companions</option>
+                <option value="3">3 Companions</option>
+            </select>
+
+            <div id="companionFields"></div>
+
+            <button type="submit" class="rsvp-submit">
+                SUBMIT RSVP
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
 
 </section>
 
@@ -2938,6 +3067,73 @@ function updateTimer() {
 
 updateTimer();
 setInterval(updateTimer, 1000);
+
+const companionCount = document.getElementById("companionCount");
+const companionFields = document.getElementById("companionFields");
+
+companionCount.addEventListener("change", function () {
+
+    const count = Number(this.value);
+
+    companionFields.innerHTML = "";
+
+    for (let i = 1; i <= count; i++) {
+
+        companionFields.innerHTML += `
+            <div class="companion-field">
+                <label>Companion ${i} - Full Name</label>
+                <input
+                    type="text"
+                    name="companion${i}"
+                    placeholder="Enter companion ${i}'s name"
+                    required
+                >
+            </div>
+        `;
+    }
+});
+const scriptURL = "https://script.google.com/macros/s/AKfycbyb0j3n2d0B-TIcRR2Ct6XQrSLRAtOty_1cZxCvOew87y2Vb2uMZlQLTTz3aqgokc5T/exec";
+
+const rsvpForm = document.getElementById("rsvpForm");
+
+rsvpForm.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const submitButton = rsvpForm.querySelector(".rsvp-submit");
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+
+    const formData = new FormData(rsvpForm);
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(result => {
+
+        alert("Thank you! Your RSVP has been submitted!");
+
+        rsvpForm.reset();
+        companionFields.innerHTML = "";
+
+    })
+    .catch(error => {
+
+        alert("Submission failed. Please try again.");
+        console.error(error);
+
+    })
+    .finally(() => {
+
+        submitButton.disabled = false;
+        submitButton.textContent = "SUBMIT RSVP";
+
+    });
+
+});
 
 </script>
 
